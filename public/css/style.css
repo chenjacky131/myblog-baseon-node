@@ -1,0 +1,36 @@
+.avatar{display: inline-block;width: 80px;height: 80px;}
+.avatar img{width: 100%;height: 100%; vertical-align: middle;}
+.post-content h3{margin-top: 0;}
+.artice-tag{padding: 0 15px;}
+.artice-tag .dropdown{display: inline-block;}
+.artice-tag .dropdown .dropdown-menu{right: 0;left: auto; min-width: 80px;}
+.dropdown-arrowdown{    display: inline-block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    color: #000;}
+.avatar-item img{width: 40px;;}    
+.alert{animation: fade 1s 1s linear both;}
+@keyframes fade{
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    25% {
+        -webkit-transform: scale(.95);
+        transform: scale(.95)
+    }
+
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(.3);
+        transform: scale(.3)
+    }
+}
