@@ -53,17 +53,17 @@ app.use(function(req,res,next){
 	next();
 });
 // 正常请求的日志
-app.use(expressWinston.logger(
+app.use(expressWinston.logger({
 	transports:[
-		new(winston.transports.Console)({
+		new (winston.transports.Console)({
 			json:true,
 			colorize:true
 		}),
 		new winston.transports.File({
 			filename:'logs/success.log'
 		})
-	]
-));
+	]	
+}));
 // 路由
 routes(app);
 // 错误请求的日志
@@ -85,7 +85,11 @@ app.use(function(err,req,res,next){
 	});
 });
 
-// 监听端口，启动程序
-app.listen(config.port, function () {
-  console.log(`${pkg.name} listening on port ${config.port}`);
-});
+if(module.parent){
+	module.exports = app;
+}else{
+	// 监听端口，启动程序
+	app.listen(config.port, function () {
+	  console.log(`${pkg.name} listening on port ${config.port}`);
+	});	
+}
