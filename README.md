@@ -1,3 +1,9 @@
 # nodeProject-myblog
-language:node,framework:bootstrap,template:ejs
-database:mongodb
+##language
+node
+##framework
+1. bootstrap
+##template
+ejs
+##database
+mongodb
