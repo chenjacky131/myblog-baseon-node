@@ -23,3 +23,5 @@ supervisor:用途就是有一个进程需要每时每刻不断的跑，但是这
 supervisor index.js
 ## 运行
 安装所需node_modules;进去config文件夹，配置mongodb地址  
+## 原git地址
+https://github.com/nswbmw/N-blog
